@@ -1,0 +1,43 @@
+@import "./../../scss/variables.scss";
+
+.scroll_link {
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  padding-bottom: 56px;
+  background-image: url("./DoubleArrowGray.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.scroll {
+  height: 80px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.scroll_text {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: $open-sans;
+  color: $font-color-gray;
+  &:hover {
+    border-bottom: $border;
+  }
+}
+
+@media screen and (max-width: $desktop-width) {
+
+  .scroll {
+    margin-bottom: 80px;
+  }
+}
+
+@media screen and (max-width: $tablet-width) {
+  
+  .scroll {
+    display: none;
+  }
+}

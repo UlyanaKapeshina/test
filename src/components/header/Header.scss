@@ -1,0 +1,99 @@
+@import "./../../scss/variables.scss";
+
+.header {
+  padding-left: 67px;
+  padding-right: 67px;
+  display: flex;
+  justify-content: center;
+  background-image: url("./Background.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto;
+  background-color: #284449;
+  height: 100vh;
+}
+
+.header_inner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header_link {
+  text-decoration: none;
+}
+
+.header_scroll {
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+  color: $font-color-white;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  padding-bottom: 52px;
+  background-image: url("./DoubleArrow.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  margin-bottom: 55px;
+  animation-name: jump;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  cursor: pointer;
+}
+
+@keyframes jump {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(0, 10px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.header_nav-button {
+  display: none;
+}
+
+@media screen and (max-width: $desktop-width) {
+  .header_scroll {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $tablet-width) {
+  .header {
+    padding-left: 44px;
+    padding-right: 44px;
+    height: auto;
+    background-position: center -170px;
+  }
+
+  .header_inner {
+    align-items: flex-start;
+  }
+
+  .header_nav-button {
+    padding: 0;
+    color: $font-color-white;
+    display: block;
+    background-color: transparent;
+    border: none;
+    font-family: "PT Sans", sans-serif;
+    font-size: 24px;
+    margin-bottom: 200px;
+    margin-top: 35px;
+
+    &:hover,
+    &:active {
+      outline: none;
+      border-bottom: $border;
+    }
+  }
+}

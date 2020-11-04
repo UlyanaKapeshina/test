@@ -1,0 +1,146 @@
+@import "./../../scss/variables.scss";
+
+.about_image {
+  width: 770px;
+  height: 700px;
+}
+
+.about {
+  padding-left: 67px;
+  padding-right: 67px;
+  display: flex;
+  flex-direction: column;
+}
+
+.about_inner {
+  display: flex;
+  margin-bottom: 80px;
+}
+
+.about_photo {
+  width: 50%;
+  padding-right: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.about_description {
+  padding-top: 51px;
+  padding-left: 26px;
+  width: 50%;
+  font-family: $open-sans;
+  font-weight: 400;
+}
+
+.about_title {
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  font-size: 60px;
+  line-height: 120px;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  margin-bottom: 31px;
+}
+
+.about_text {
+  padding: 0;
+  margin: 0;
+  font-size: 24px;
+  line-height: 50px;
+  font-family: $open-sans;
+  font-weight: 300;
+  letter-spacing: 0.025em;
+  margin-bottom: 25px;
+  max-width: 676px;
+}
+
+.about_name {
+  margin: 0;
+  padding: 0;
+  font-size: 36px;
+  line-height: 50px;
+  margin-top: 44px;
+}
+
+@media screen and (max-width: $desktop-width) {
+  .about {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .about_inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .about_photo {
+    width: 100%;
+    margin: 0;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .about_description {
+    box-sizing: border-box;
+    margin: 0;
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about_title {
+    width: 676px;
+  }
+
+  .about_name {
+    width: 100%;
+    width: 676px;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: $tablet-width) {
+  .about_description {
+    width: 100%;
+    padding-top: 35px;
+    padding-left: 31px;
+    padding-right: 24px;
+  }
+
+  .about_title {
+    font-size: 30px;
+    line-height: 50px;
+    margin-bottom: 0;
+    width: 100%;
+  }
+
+  .about_text {
+    font-size: 18px;
+    margin-bottom: 30px;
+
+    max-width: 100%;
+
+    &--last {
+      display: none;
+    }
+  }
+
+  .about_photo {
+    height: 696px;
+  }
+
+  .about_name {
+    width: 100%;
+    margin-top: 0;
+    font-size: 18px;
+  }
+}
